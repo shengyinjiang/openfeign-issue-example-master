@@ -1,0 +1,16 @@
+feign:
+  compression:
+    response:
+      enabled: true
+  httpclient:
+    enabled: true
+  okhttp:
+    enabled: false
+server:
+  port: 8002
+
+# custom load okhttp bean switch
+# @ConditionalOnProperty("custom.okhttp.enabled")
+custom:
+  okhttp:
+    enabled: false
