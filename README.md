@@ -3,10 +3,10 @@ This is an example to reproduce the problem reported in [Feign compression is no
 
 Steps:
 1. Run the server application
-2. Run the client application
-3. set "custom.okhttp.enabled=false" in application.yml
+2. set "custom.okhttp.enabled=false" in client-side/resources/application.yml
+3. Run the client application
 4. HTTP GET from http://localhost:8002/client/get (you will get [accept-encoding:"gzip", "deflate", accept:"*/*", content-length:"0", host:"localhost:8001", connection:"Keep-Alive", user-agent:"Apache-HttpClient/4.5.13 (Java/11.0.1)"])
-5. set "custom.okhttp.enabled=true" in application.yml
+5. set "custom.okhttp.enabled=true" in client-side/resources/application.yml
 6. Rerun the client application
 7. HTTP GET from http://localhost:8002/client/get (you will get [accept:"*/*", content-length:"0", host:"localhost:8001", connection:"Keep-Alive", user-agent:"Apache-HttpClient/4.5.13 (Java/11.0.1)"])
 
